@@ -1,9 +1,7 @@
-import { run } from './other';
+import { is_dev } from './util';
 
-import { readFile } from 'fs';
-
-console.log(readFile);
-
-run();
-
-console.log(process.env.NODE_ENV);
+if (is_dev()) {
+  console.log("Dev env");
+} else {
+  console.log("Prod env");
+}
