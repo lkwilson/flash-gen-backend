@@ -1,7 +1,7 @@
-import { is_dev } from './util';
+import { load_env, is_dev } from './util';
 
-if (is_dev()) {
-  console.log("Dev env");
-} else {
-  console.log("Prod env");
-}
+load_env();
+
+const api_key = process.env.API_KEY;
+
+
