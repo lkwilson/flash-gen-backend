@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "node ./build/main.js"
   },
   "keywords": [],
   "author": "",
