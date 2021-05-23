@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './src/main.ts',
@@ -10,13 +11,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  externals: [nodeExternals()],
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: [
-          'ts-loader',
-        ]
+        use: 'ts-loader',
       }
     ]
   }
